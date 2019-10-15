@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class Car implements Acceleration {
+public abstract class Car implements Acceleration {
     private Colors.Color color;
     private String typeOfBox;
     private String model;
