@@ -1,5 +1,3 @@
-import java.awt.*;
-
 public class Main {
     public static void main(String[] args) {
         int manAge = 25;
@@ -10,11 +8,18 @@ public class Main {
         Car porsche = new Porsche();
         Car mercedes = new Mercedes();
 
-        Man man = new Driver("Ion", manAge);
-        Man woman = new Passengers("Ioana", womanAge);
+        Man driver = new Driver("Ion", manAge);
+        Man passenger = new Passengers("Ioana", womanAge);
 
-        System.out.println(man == woman);
-        System.out.println(man.equals(woman));
+        StringBuilder car = new StringBuilder();
+        car.append(tesla);
+
+        StringBuffer man = new StringBuffer();
+        man.append(passenger);
+        man.append(driver);
+
+        System.out.println(driver == passenger);
+        System.out.println(driver.equals(passenger));
 
         System.out.println(audi == mercedes);
         System.out.println(audi.equals(mercedes));
@@ -38,6 +43,5 @@ public class Main {
             e.printStackTrace();
         }
     }
-
 }
 

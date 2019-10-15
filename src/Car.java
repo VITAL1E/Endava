@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Car implements Acceleration {
     private Colors.Color color;
     private String typeOfBox;
@@ -56,6 +58,33 @@ public class Car implements Acceleration {
         }
         System.out.println("There is enough space");
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Car car = (Car) o;
+        return capacity == car.capacity &&
+                color == car.color &&
+                Objects.equals(typeOfBox, car.typeOfBox) &&
+                Objects.equals(model, car.model);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(color, typeOfBox, model, capacity);
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "color=" + color +
+                ", typeOfBox='" + typeOfBox + '\'' +
+                ", model='" + model + '\'' +
+                ", capacity=" + capacity +
+                '}';
+    }
+
 
 }
 
