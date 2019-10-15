@@ -1,15 +1,15 @@
 public class Main {
     public static void main(String[] args) {
-        int manAge = 25;
-        Integer womanAge = 23;
+        int driverAge = 25;
+        Integer passengerAge = 23;
 
         Car audi = new Audi();
         Car tesla = new Tesla();
         Car porsche = new Porsche();
         Car mercedes = new Mercedes();
 
-        Man driver = new Driver("Ion", manAge);
-        Man passenger = new Passengers("Ioana", womanAge);
+        Man driver = new Driver("Ion", driverAge);
+        Man passenger = new Passengers("Ioana", passengerAge);
 
         StringBuilder car = new StringBuilder();
         car.append(tesla);
